@@ -46,6 +46,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.tt</DependentUpon>
     </Compile>
+    <Compile Include="MigrationTool.cs" />
     <Compile Include="CSharpMigrationCodeGenerator.cs" />
     <Compile Include="CSharpModelCodeGenerator.cs" />
     <Compile Include="MigrationScaffolder.cs" />

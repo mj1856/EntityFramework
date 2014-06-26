@@ -15,7 +15,7 @@ using Microsoft.Data.Entity.Utilities;
 
 namespace Microsoft.Data.Entity.Migrations.Design
 {
-    public abstract class MigrationScaffolder
+    public class MigrationScaffolder
     {
         private readonly DbContextConfiguration _contextConfiguration;
         private readonly MigrationAssembly _migrationAssembly;
@@ -152,8 +152,12 @@ namespace Microsoft.Data.Entity.Migrations.Design
             return _contextConfiguration.Context.GetType().Name + "ModelSnapshot";
         }
 
-        protected abstract void OnMigrationScaffolded(string className, string migrationClass, string migrationMetadataClass);
+        protected void OnMigrationScaffolded(string className, string migrationClass, string migrationMetadataClass)
+        {            
+        }
 
-        protected abstract void OnModelScaffolded(string className, string modelSnapshotClass);
+        protected void OnModelScaffolded(string className, string modelSnapshotClass)
+        {            
+        }
     }
 }
